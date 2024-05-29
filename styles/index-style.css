@@ -1,0 +1,546 @@
+*{
+	
+}
+
+:root {
+    
+    --white-text-shadow: 0 0 20px #ffffff;
+    
+    
+}
+
+body{
+	/*background-image: linear-gradient(123deg, rgba(138,0,29,1) 0%, rgba(0,0,0,0.9682247899159664) 47%, rgba(157,28,55,1) 94%);*/
+	background-color: black;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(neuropol-x-free.rg-regular.otf);
+}
+
+@font-face {
+  font-family: "fuenteXD";
+  src: url('PortlandLdo-L394.ttf'); /* Ruta a tu archivo de fuente */
+}
+
+.aside-left {
+   
+    width: 10%;
+    border: solid blue;/* Agrega otros estilos según tus preferencias */
+   	margin-left: -310px;
+   	position: absolute;
+   	height: 900px;
+}
+
+.aside-RIGHT {
+   
+    width: 13%;
+    border: solid blue;/* Agrega otros estilos según tus preferencias */
+   	margin-left: 48.7%;
+   	position: absolute;
+   	height: 400px;
+}
+
+.aside-RIGHT img:first-of-type {
+     /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+    border-radius: 10px; /* Opcional: si quieres bordes redondeados */
+    box-shadow: 0 0 60px 7px rgb(98 79 255 / 38%); /* Ajusta los valores según el efecto deseado */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+
+.topbox{
+	
+	
+	height: 150px;
+
+	box-shadow: inset -1px -1px #00138c, inset 1px 1px #0831d9, inset -2px -2px #001ea0, inset 2px 2px #166aee, inset -3px -3px #003bda, inset 3px 3px #0855dd;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.topbox{
+	 font-size: 30px;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+    background: #212020;
+    padding: 3px;
+
+}
+
+.title-bar {
+    font-family: Trebuchet MS;
+    background: linear-gradient(180deg,#18ff09,#25ee00 8%,#2bb514 40%,#17ff00 88%,#46ed37 93%,#1bff00 95%,#0dd700 96%,#07d700);
+    padding: 3px 5px 3px 3px;
+    border-top: 1px solid #24d908;
+    border-left: 1px solid #0bd908;
+    border-right: 1px solid #0da000;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 7px;
+    font-size: 24px;
+    text-shadow: 1px 1px #13890f;
+    height: 29px;
+    margin-top: -8px;
+    width: 100.7%;
+    margin-left: -10px;
+}
+
+.topbox {
+    box-shadow: inset -1px -1px #178c00, inset 1px 1px #15d908, inset -2px -2px #00a003, inset 2px 2px #16ee31,
+        inset -3px -3px #06da00, inset 3px 3px #08dd0f;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 0 0 3px 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.controles img {
+    height: 20px;
+    transition: filter 0.3s ease; /* Añade la transición para el cambio de filtro */
+
+}
+.controles img:hover {
+    filter: brightness(70%);
+}
+
+
+
+.controles img:nth-child(1) {
+    transition: filter 0.3s ease; /* Añade la transición para el cambio de filtro */
+}
+
+.controles img:nth-child(2) {
+    transition: filter 0.3s ease; /* Añade la transición para el cambio de filtro */
+}
+
+.controles img:nth-child(3) {
+    transition: filter 0.3s ease; /* Añade la transición para el cambio de filtro */
+}
+
+.controles img:hover {
+    filter: brightness(70%);
+}
+
+
+.controles{
+	margin-left: 1350px;
+}
+
+.window-body {
+  color: white;
+  font-family: "fuenteXD", sans-serif;
+  text-shadow: var(--white-text-shadow);
+  font-size: 50px;
+  overflow: hidden;
+  position: relative;
+  width: 1450px;
+}
+
+.window-body img.first-image {
+  width: 3%; /* Reduje el ancho para que sea más pequeña */
+  height: auto;
+  position: absolute;
+  top: 9px; /* Ajusta la posición de la primera imagen desde la parte superior */
+  left: 10px; /* Ajusta la posición de la primera imagen desde la izquierda */
+}
+
+.window-body img:last-child {
+  width: 8%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+   margin-bottom: 32px;
+}
+
+
+
+  
+.shuttensdiary{
+	margin-left: -30px;
+margin-top: -30px;
+	height: 100px;
+	width: 110%;
+    background-color: #234f21;
+    color: red;
+    font-size: 80px;
+
+}
+
+.shuttensdiary img:nth-child(1){
+	margin-top: -10px;
+	height: 110%;
+	width: 100%;
+}
+
+
+.title-bar-text{
+margin-right: 1300px;
+margin-top: -28px;
+color: white;
+}
+
+.container{
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	flex-flow: row wrap;
+	width: 95%;
+	margin: 0 auto;
+	color: white;	
+	border: solid 1px;
+	
+}
+
+
+
+
+.wrapper{
+	
+	display: flex;
+	flex-flow: row wrap;
+	text-align: center;
+	width: 48%;
+	margin: 0 auto;
+	justify-content: center;
+
+}
+
+.wrapper > *{
+	padding: 10px;
+	margin: 10px;
+	flex: 1 100%;
+}
+/*
+.header{
+	outline-color: lightcoral;
+	height: 100px;
+	outline-style: solid;
+	outline-width: 2px;
+	
+}*/
+
+.nav{
+	width: 96%;
+	flex: 0 0 auto;
+	margin-top: -10px;
+	border-left: 2px solid white; /* Ajusta el grosor y el color del borde según tus necesidades */
+    border-right: 2px solid white; /* Ajusta el grosor y el color del borde según tus necesidades */
+    border-bottom: 2px solid white; 
+	
+    background-color: #333;
+    
+}
+
+.footer{
+	background: lightseagreen;
+	height: 30px;
+	order:5;
+}
+
+.aside1{
+
+	margin-top: -10px;
+	max-width: 100%;
+   margin-right: -10px;
+    display: flex;
+    justify-content: center;
+     background-image: url('https://i.pinimg.com/originals/d6/0f/75/d60f7528bfc95059ea678209f793b75e.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 110%;
+
+}
+
+.aside1 img{
+	max-width: 90%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    border: solid 4px midnightblue;
+    border-style: outset;
+    margin-top: 15px;
+
+}
+.aside1 {
+    position: relative; 
+    border-left: 2px solid white;
+    border-radius: 3px;
+    height: 103%;
+}
+
+.aside1::before {
+    content: ""; /* Agrega un pseudo-elemento */
+    position: absolute; /* Establece el posicionamiento absoluto */
+    top: 0; /* Alinea el pseudo-elemento con la parte superior del contenedor */
+    left: 0; /* Alinea el pseudo-elemento con la izquierda del contenedor */
+    width: 100%; /* Establece el ancho al 100% del contenedor */
+    height: 100%; /* Establece la altura al 100% del contenedor */
+    background-color: rgba(0, 0, 0, 0.5); /* Establece un fondo negro semitransparente */
+    z-index: 1; /* Asegura que la capa esté por encima de la imagen */
+}
+
+.imagenperfil {
+    position: relative; /* Establece el posicionamiento relativo */
+    z-index: 2; /* Asegura que la imagen esté por encima de la capa semitransparente */
+}
+
+.imagenperfil img{
+    height: 30%;
+    width: 90%;
+}
+
+
+.other{
+	outline-style: solid;
+	outline-width: 2px;
+	outline-color: pink;
+	order: 4;
+}
+
+.main{
+	width: 68%;
+	height: 600px;
+	padding: 20px;
+	text-align: center;
+    flex: 3;
+    
+}
+
+.info-container {
+    background-image: linear-gradient(45deg, #3f18dd, transparent);
+ /* Color de fondo rojo con transparencia */
+    padding: 10px; /* Espacio entre el contenido y el borde */
+    margin-bottom: 20px; /* Espacio entre este contenedor y el contenido principal */
+    width: 50%;
+    height: 40%;
+    border-radius: 5px;
+    display: flex; /* Establecer el contenedor como un flex container */
+    align-items: flex-start; /* Alinear elementos al principio del contenedor */
+    justify-content: flex-start; /* Alinear el contenido hacia la izquierda */	
+    border: 3px solid white;
+    border-radius: 4px;
+
+}
+
+.texto-perfil{
+	background-color: rgba(100, 127, 143, 0.2); /* Color de fondo rojo con transparencia */
+    padding: 1px; /* Espacio entre el contenido y el borde */
+    width: 40%;
+    height: 50%;
+    border-radius: 5px;
+    margin: 5px auto; /* Centrar verticalmente y agregar espacio entre ellos */
+    display: flex; /* Establecer el contenedor como un flex container */
+    align-items: center; /* Centrar verticalmente los elementos */
+    justify-content: flex-start; /* Centrar horizontalmente los elementos */
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-family: myFirstFont;
+}
+
+
+.info-content {
+    display: flex; /* Establecer el contenedor como un flex container */
+    flex-direction: column; /* Alinear los elementos verticalmente */
+    
+    
+}
+
+.vertical-text {
+    writing-mode: vertical-lr; /* 'rl' significa de derecha a izquierda */
+    font-size: 40px;
+    font-family: myFirstFont;
+    background-color: rgba(255, 0, 0, 0.2);
+    width: fit-content;
+    white-space: nowrap;
+    float: left;
+    
+
+
+}
+
+.vertical-text .info-content{
+	 height: inherit; /* Heredar la altura del info-container */
+}
+
+.container-texto-perfil{
+	
+	position: relative;
+	left: -10%;
+	margin-top: 5%;
+
+}	
+
+.containerinfoYahir{
+	margin-top: 20%;
+	text-align: center;
+	background-color: red;
+}
+
+.aside1 > img:first-of-type {
+   
+     min-width: 150px; /* Por ejemplo, aquí puedes definir el ancho mínimo deseado */
+
+
+}
+
+.imagenperfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+marquee{
+	
+	position: absolute; /* Establece la posición absoluta para que ignore el div imagenperfil */
+    width: 100%; /* Hace que el marquee ocupe todo el ancho del aside1 */
+
+    padding: 0; /* Elimina cualquier relleno interno */
+    margin: 0; /* Elimina cualquier margen */
+    z-index: 3; /* Asegura que el marquee esté por encima de otros elementos */
+    bottom: 0px;
+   
+}
+
+
+
+.marqueeboton img {
+    display: inline-block; /* Asegura que los gifs se muestren en línea */
+  
+}
+
+.other{
+	height: 500px;
+
+}
+
+.other >img:first-of-type{
+	height: 50%;
+	width: 30%;
+	margin-left: -70%;
+
+}
+
+
+/*Navbar*/
+ul {
+  list-style-type: none;
+  margin-top: 0.5%;
+  
+  display: flex;
+  justify-content: space-around;
+ 
+  
+}
+
+
+
+li a {
+  
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 40px;
+}
+
+li a:hover:not(.active) {
+  background-color:  rgba(138,0,29,1);
+  
+}
+
+.active {
+  background-color: rgba(138,0,29,1);
+  
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.cbox{
+	margin-bottom: 200%;
+	margin-right: 4px;
+}
+
+
+
+/*Responsive */
+
+@media all and (min-width: 600px){
+
+	
+
+
+	.main{
+		flex: 2;
+
+	}
+	.aside1{
+		order:2;
+
+
+	}
+
+	.main{
+		order:1;
+	}
+	.footer{
+		order: 4;
+	}
+
+
+
+	
+
+}
+
+@media all and (min-width: 600px){
+	.aside1{
+		flex:1;
+
+
+	}
+
+
+
+
+
+}
+
+@media all and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .header,
+  .main,
+  .aside1 {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 600px) {
+    .container-texto-perfil {
+        width: 80%; /* Cambia el ancho del contenedor en pantallas más pequeñas */
+        max-width: 300px; /* Cambia el ancho máximo del contenedor en pantallas más pequeñas */
+        top: -5%; /* Ajusta la posición hacia arriba en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 599px) {
+    .main {
+        outline: none; /* Quita la propiedad outline cuando el ancho de la pantalla es menor a 599px */
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .aside1 > img:first-of-type {
+        min-width: 100px; /* Reduces el ancho mínimo para adaptarlo a pantallas más pequeñas */
+    }
+}

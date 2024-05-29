@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "scripts": {
+    "dev": "netlify dev"
+  }
+}
