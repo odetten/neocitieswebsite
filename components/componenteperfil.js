@@ -8,7 +8,7 @@ divImagenPerfil.classList.add('imagenperfil');
 
 // Crear el elemento <img> con el atributo src y alt
 const imgElement = document.createElement('img');
-imgElement.src = 'images/shinjiropfp.png';
+imgElement.src = 'images/shinjiropfp.jpeg';
 imgElement.alt = 'profilepic';
 
 // Crear el elemento <div> con la clase "containerinfoYahir"
