@@ -24,6 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
     navBar.appendChild(navList);
 
     // Insert navigation bar before the buttons div
-    const buttonsDiv = document.querySelector(".buttons");
-    buttonsDiv.parentNode.insertBefore(navBar, buttonsDiv);
+    const otherDiv = document.querySelector(".other");
+    otherDiv.parentNode.insertBefore(navBar, otherDiv);
 });
