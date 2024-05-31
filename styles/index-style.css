@@ -11,7 +11,7 @@
 
 body{
 	/*background-image: linear-gradient(123deg, rgba(138,0,29,1) 0%, rgba(0,0,0,0.9682247899159664) 47%, rgba(157,28,55,1) 94%);*/
-	background-color: black;
+	background-color: rgb(0, 0, 0);
 }
 
 @font-face {
@@ -33,7 +33,7 @@ body{
    	height: 900px;
 }
 
-.aside-RIGHT {
+.Asidecolumn {
    
     width: 13%;
     border: solid blue;/* Agrega otros estilos según tus preferencias */
@@ -42,12 +42,39 @@ body{
    	height: 400px;
 }
 
-.aside-RIGHT img:first-of-type {
+.Asidecolumn img:first-of-type {
      /* Ajusta el tamaño según tus necesidades */
     height: auto;
     border-radius: 10px; /* Opcional: si quieres bordes redondeados */
     box-shadow: 0 0 60px 7px rgb(98 79 255 / 38%); /* Ajusta los valores según el efecto deseado */
     transition: box-shadow 0.3s ease-in-out;
+}
+
+.aside-RIGHT2 {
+    margin-top: -400px;
+    
+    box-shadow: 0 0 10px 1px rgb(98 79 255 / 38%); /* Ajusta los valores según el efecto deseado */
+    transition: box-shadow 0.3s ease-in-out;
+    border: solid blue;
+}
+
+#listening{
+    color: white;
+   
+}
+
+#blob{
+    background: #5dff8a;
+    border-radius: 50%;
+    margin-right: 7px;
+    height: 10px;
+    width: 10px;
+    box-shadow: 0 0 0 0 #5dff8a;
+    transform: scale(1);
+    animation: pulse 2s infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 3px;
 }
 
 
@@ -466,6 +493,8 @@ li a:hover:not(.active) {
 	margin-bottom: 200%;
 	margin-right: 4px;
 }
+
+
 
 
 
