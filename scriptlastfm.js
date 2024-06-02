@@ -24,10 +24,10 @@ socket.onmessage = function (event) {
 
   if (data["recenttracks"]["track"][0].nowplaying === "true") {
     document.getElementById("trackStatus").innerHTML = "Listening to:";
-    document.getElementById("blob").style.background = "#5dff8a";
+    document.getElementById("blob").style.background = "#3ffc06";
   } else {
     document.getElementById("trackStatus").innerHTML = "Last song played:";
-    document.getElementById("blob").style.background = "#5d5d5d";
+    document.getElementById("blob").style.background = "#e40404";
   }
 };
 
