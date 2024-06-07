@@ -26,12 +26,12 @@ pElement2.innerHTML = '<span>Title2:hello2</span>';
 divContainerInfoYahir.appendChild(pElement1);
 divContainerInfoYahir.appendChild(pElement2);
 
-// Añadir la imagen y divContainerInfoYahir al div divImagenPerfil
+// Añadir la imagen al div divImagenPerfil
 divImagenPerfil.appendChild(imgElement);
-divImagenPerfil.appendChild(divContainerInfoYahir);
 
-// Añadir el div divImagenPerfil al aside
+// Añadir el div divImagenPerfil y divContainerInfoYahir al aside
 asideElement.appendChild(divImagenPerfil);
+asideElement.appendChild(divContainerInfoYahir);
 
 // Obtener el contenedor padre donde se añadirá el aside
 const containerElement = document.querySelector('.container');
@@ -39,51 +39,29 @@ const containerElement = document.querySelector('.container');
 // Insertar el aside antes del footer en el contenedor padre
 containerElement.insertBefore(asideElement, containerElement.querySelector('.footer'));
 
-
-
 // Crear el elemento <marquee> con la clase "marqueeboton"
 const marqueebotones = document.createElement('marquee');
 marqueebotones.classList.add('marqueeboton');
 
-// Crear el elemento <img> con el atributo src y alt
-const gif1Element = document.createElement('img');
-const gif2Element = document.createElement('img');
-const gif3Element = document.createElement('img');
-const gif4Element = document.createElement('img');
-const gif5Element = document.createElement('img');
-const gif6Element = document.createElement('img');
+// Crear los elementos <img> con el atributo src y alt
+const gifSources = [
+    'images/coffee.gif',
+    'images/viewed.gif',
+    'images/windows.gif',
+    'images/2006.gif',
+    'images/drpepper.gif',
+    'images/apocalypse.gif'
+];
 
-gif1Element.src = 'images/coffee.gif'; // Reemplaza 'ruta_al_gif.gif' con la ruta a tu gif
-gif1Element.alt = 'gif_alternative_text'; // Texto alternativo para accesibilidad
-
-gif2Element.src = 'images/viewed.gif'; // Reemplaza 'ruta_al_gif.gif' con la ruta a tu gif
-gif2Element.alt = 'gif_alternative_text'; // Texto alternativo para accesibilidad
-
-gif3Element.src = 'images/windows.gif'; // Reemplaza 'ruta_al_gif.gif' con la ruta a tu gif
-gif3Element.alt = 'gif_alternative_text'; // Texto alternativo para accesibilidad
-
-gif4Element.src = 'images/2006.gif'; // Reemplaza 'ruta_al_gif.gif' con la ruta a tu gif
-gif4Element.alt = 'gif_alternative_text'; // Texto alternativo para accesibilidad
-
-gif5Element.src = 'images/drpepper.gif'; // Reemplaza 'ruta_al_gif.gif' con la ruta a tu gif
-gif5Element.alt = 'gif_alternative_text'; // Texto alternativo para accesibilidad
-
-gif6Element.src = 'images/apocalypse.gif'; // Reemplaza 'ruta_al_gif.gif' con la ruta a tu gif
-gif6Element.alt = 'gif_alternative_text'; // Texto alternativo para accesibilidad
-
-// Añadir el elemento <img> al elemento <marquee>
-marqueebotones.appendChild(gif1Element);
-marqueebotones.appendChild(gif2Element);
-marqueebotones.appendChild(gif3Element);
-marqueebotones.appendChild(gif4Element);
-marqueebotones.appendChild(gif5Element);
-marqueebotones.appendChild(gif6Element);
-
+gifSources.forEach(src => {
+    const gifElement = document.createElement('img');
+    gifElement.src = src;
+    gifElement.alt = 'gif_alternative_text';
+    marqueebotones.appendChild(gifElement);
+});
 
 // Obtener el elemento aside1 donde se agregará el marquee
 const aside1Element = document.querySelector('.aside1');
 
 // Insertar el marquee dentro del aside1
 aside1Element.appendChild(marqueebotones);
-
-
