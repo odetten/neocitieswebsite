@@ -1,10 +1,7 @@
-*{
-	
-}
 
 :root {
     
-    --white-text-shadow: 0 0 20px #ffffff;
+    --white-text-shadow: 0 0 20px #43944e;
     
     
 }
@@ -21,7 +18,12 @@ body{
 
 @font-face {
   font-family: "fuenteXD";
-  src: url('PortlandLdo-L394.ttf'); /* Ruta a tu archivo de fuente */
+  src: url('BigDots.ttf'); /* Ruta a tu archivo de fuente */
+}
+
+@font-face{
+    font-family: "tsc";
+    src: url('TT_CHIARO-B.ttf') format('truetype');
 }
 
 .aside-left {
@@ -94,7 +96,7 @@ body{
 	 font-size: 30px;
     box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
     padding: 3px;
-     background-image: url('../images/tsc_banner1.jpg');
+     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("../images/tsc_banner1.jpg");
 }
 
 .silvercasebanner1{
@@ -173,16 +175,16 @@ body{
 }
 
 .window-body img.first-image {
-  width: 3%; /* Reduje el ancho para que sea más pequeña */
-  height: auto;
+  width: 7%; /* Reduje el ancho para que sea más pequeña */
+  height: 60%;
   position: absolute;
-  top: 9px; /* Ajusta la posición de la primera imagen desde la parte superior */
+  top: 20%; /* Ajusta la posición de la primera imagen desde la parte superior */
   left: 10px; /* Ajusta la posición de la primera imagen desde la izquierda */
 }
 
 .window-body img:last-child {
   width: 15%;
-  height: 60%;
+  height: 63%;
   position: absolute;
   margin-left: 38%;
   bottom: 0;
@@ -256,14 +258,16 @@ color: white;
 }*/
 
 .nav{
-	width: 96%;
+	width: 95.2%;
+    height: 100px;
 	flex: 0 0 auto;
 	margin-top: -10px;
 	border-left: 2px solid white; /* Ajusta el grosor y el color del borde según tus necesidades */
     border-right: 2px solid white; /* Ajusta el grosor y el color del borde según tus necesidades */
     border-bottom: 2px solid white; 
-	
-    background-color: #333;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/tsc_banner2.png");
+    background-position: center 58%;
+
     
 }
 
@@ -273,58 +277,110 @@ color: white;
 	order:5;
 }
 
-.aside1{
-
-	margin-top: -10px;
-	max-width: 100%;
-   margin-right: -10px;
+.aside1 {
+    margin-top: -10px;
+    max-width: 100%;
+    margin-right: -10px;
     display: flex;
-    justify-content: center;
-     background-image: url('https://i.pinimg.com/originals/d6/0f/75/d60f7528bfc95059ea678209f793b75e.jpg');
+    flex-direction: column;
+    align-items: center; /* Centrar los elementos horizontalmente */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('https://i.pinimg.com/originals/d6/0f/75/d60f7528bfc95059ea678209f793b75e.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 110%;
-
-}
-
-.aside1 img{
-	max-width: 90%;
-    height: 25%;
-    display: flex;
-    justify-content: center;
-    border: solid 4px midnightblue;
-    border-style: outset;
-    margin-top: 15px;
-
-}
-.aside1 {
-    position: relative; 
+    position: relative;
     border-left: 2px solid white;
     border-radius: 3px;
     height: 103%;
 }
 
+.imagenperfil img{
+    width: 50%; /* Ajustar el tamaño de la imagen según sea necesario */
+    max-width: 200px; /* Limitar el tamaño máximo de la imagen */
+    height: auto; /* Mantener la proporción de la imagen */
+    border: solid 4px midnightblue;
+    border-style: outset;
+    margin-top: 15px;
+    display: block; /* Cambiar display flex a block para img */
+}
+
 .aside1::before {
-    content: ""; /* Agrega un pseudo-elemento */
-    position: absolute; /* Establece el posicionamiento absoluto */
-    top: 0; /* Alinea el pseudo-elemento con la parte superior del contenedor */
-    left: 0; /* Alinea el pseudo-elemento con la izquierda del contenedor */
-    width: 100%; /* Establece el ancho al 100% del contenedor */
-    height: 100%; /* Establece la altura al 100% del contenedor */
-    background-color: rgba(0, 0, 0, 0.5); /* Establece un fondo negro semitransparente */
-    z-index: 1; /* Asegura que la capa esté por encima de la imagen */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .imagenperfil {
-    position: relative; /* Establece el posicionamiento relativo */
-    z-index: 2; /* Asegura que la imagen esté por encima de la capa semitransparente */
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center; /* Centrar la imagen horizontalmente */
+    width: 100%;
+    margin-bottom: 20px; /* Añadir espacio entre la imagen y el contenido */
 }
 
-.imagenperfil img{
-    height: 30%;
-    width: 90%;
+.containerinfoYahir {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    overflow: hidden;
+    z-index: 1;
+    font-family: "tsc", sans-serif;
 }
+
+.containerinfoYahir::before, .containerinfoYahir::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent ;
+    box-sizing: border-box;
+    animation: animate 3.5s linear infinite;
+}
+
+.containerinfoYahir::before {
+    border-left-color: black;
+            border-right-color: black;
+            border-top-color: black;
+            border-bottom-color: black;
+            animation-delay: 3s;
+}
+
+.containerinfoYahir::after {
+    border-top-color: rgba(68, 108, 243, 0.678);
+    border-bottom-color: rgba(55, 91, 209, 0.678);
+    border-left-color: rgba(22, 59, 180, 0.678);
+    border-right-color: rgba(16, 38, 110, 0.678);
+}
+
+@keyframes animate {
+    0% {
+        clip: rect(0px, 4px, 150px, 0px); /* Inicio: ninguna parte visible */
+    }
+    25% {
+        clip: rect(0px, 200px, 5px, 0px); /* Línea horizontal arriba */
+    }
+    50% {
+        clip: rect(0px, 200px, 200px, 196px); /* Línea vertical derecha */
+    }
+    75% {
+        clip: rect(196px, 200px, 200px, 0px); /* Línea horizontal abajo */
+    }
+    100% {
+        clip: rect(0px, 4px, 200px, 0px); /* Línea vertical izquierda */
+    }
+}
+
+
 
 
 .other{
@@ -340,6 +396,7 @@ color: white;
 	padding: 20px;
 	text-align: center;
     flex: 3;
+    font-family: "tsc", sans-serif;
     
 }
 
@@ -347,7 +404,7 @@ color: white;
     
  /* Color de fondo rojo con transparencia */
     padding: 10px; /* Espacio entre el contenido y el borde */
-    margin-bottom: 20px; /* Espacio entre este contenedor y el contenido principal */
+    margin-top: 50%; /* Espacio entre este contenedor y el contenido principal */
     width: 40%;
     height: 20%;
     display: flex; /* Establecer el contenedor como un flex container */
@@ -361,9 +418,6 @@ color: white;
 
 }
 
-.info-container img{
-    
-}
 
 .texto-perfil{
 	background-color: rgba(100, 127, 143, 0.2); /* Color de fondo rojo con transparencia */
@@ -413,11 +467,11 @@ color: white;
 
 }	
 
-.containerinfoYahir{
-	margin-top: 20%;
-	text-align: center;
-	background-color: red;
-}
+
+
+
+
+
 
 .aside1 > img:first-of-type {
    
@@ -467,8 +521,8 @@ marquee{
 /*Navbar*/
 ul {
   list-style-type: none;
-  margin-top: 0.5%;
-  
+  margin-top: 3%;
+  font-family: "tsc", sans-serif;
   display: flex;
   justify-content: space-around;
  
@@ -487,12 +541,13 @@ li a {
 }
 
 li a:hover:not(.active) {
-  background-color:  rgba(138,0,29,1);
+  background-color:  rgba(29, 209, 23, 0.397);
+  
   
 }
 
 .active {
-  background-color: rgba(138,0,29,1);
+  background-color: rgb(15, 95, 51);
   
 }
 
