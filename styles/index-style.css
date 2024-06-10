@@ -52,6 +52,7 @@ body{
     border-radius: 10px; /* Opcional: si quieres bordes redondeados */
     box-shadow: 0 0 60px 7px rgb(98 79 255 / 38%); /* Ajusta los valores según el efecto deseado */
     transition: box-shadow 0.3s ease-in-out;
+    
 }
 
 .aside-RIGHT2 {
@@ -61,6 +62,7 @@ body{
     transition: box-shadow 0.3s ease-in-out;
     border: solid blue;
 }
+
 
 #listening{
     color: white;
@@ -161,7 +163,11 @@ body{
 
 
 .controles{
-	margin-left: 750px;
+	display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
 }
 
 .window-body {
@@ -495,15 +501,35 @@ marquee{
     margin: 0; /* Elimina cualquier margen */
     z-index: 3; /* Asegura que el marquee esté por encima de otros elementos */
     bottom: 0px;
+    
    
 }
 
-
-
-.marqueeboton img {
-    display: inline-block; /* Asegura que los gifs se muestren en línea */
-  
+.Asidecolumn img:first-of-type {
+    
+    border-radius: 10px;
+    box-shadow: 0 0 60px 7px rgb(98 79 255 / 38%);
+    transition: box-shadow 0.3s ease-in-out;
 }
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    display: flex;
+    justify-content: center; /* Centra el contenido dentro del contenedor */
+}
+
+.marquee-container marquee {
+    width: 100%; /* Hace que el marquee ocupe todo el ancho del contenedor */
+}
+
+.marquee-container img {
+   
+    display: inline-block;
+}
+
+
+
 
 .other{
 	height: 500px;
@@ -561,6 +587,7 @@ li a:hover:not(.active) {
 .cbox{
 	margin-bottom: 200%;
 	margin-right: 4px;
+    font-family: "tsc", sans-serif;
 }
 
 
@@ -640,5 +667,148 @@ li a:hover:not(.active) {
 @media (max-width: 600px) {
     .aside1 > img:first-of-type {
         min-width: 100px; /* Reduces el ancho mínimo para adaptarlo a pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .title-bar {
+        font-size: 20px;
+    }
+
+    .controles {
+        margin-right: 0;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-bar {
+        font-size: 16px;
+    }
+
+    .controles img {
+        height: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .window-body {
+        font-size: 40px;
+    }
+
+    .title-bar-text {
+        font-size: 6vw; /* Ajusta el tamaño del texto para pantallas medianas */
+    }
+
+    .window-body img.first-image,
+    .window-body img:last-child {
+        width: 20%; /* Aumenta el tamaño relativo de las imágenes en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .window-body {
+        font-size: 30px;
+    }
+
+    .title-bar-text {
+        font-size: 7vw; /* Ajusta el tamaño del texto para pantallas pequeñas */
+    }
+
+    .window-body img.first-image,
+    .window-body img:last-child {
+        width: 25%; /* Aumenta el tamaño relativo de las imágenes en pantallas pequeñas */
+    }
+
+    .window-body img.first-image {
+        top: 25%; /* Ajusta la posición para pantallas pequeñas */
+        left: 5px;
+    }
+
+    .window-body img:last-child {
+        margin-left: 33%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .Asidecolumn {
+        width: 20%;
+        margin-left: 45%;
+        height: auto;
+    }
+    
+
+    
+
+    .marquee-container{
+        width: 40%;
+    }
+
+    .cbox iframe {
+        height: 250px;
+    }
+}
+
+@media (max-width: 992px) {
+    .Asidecolumn {
+        width: 25%;
+        margin-left: 40%;
+    }
+
+    
+
+    .cbox iframe {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Asidecolumn {
+        width: 40%;
+        margin-left: 30%;
+    }
+
+    .Asidecolumn img:first-of-type {
+        width: 60%;
+    }
+
+    .cbox iframe {
+        height: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .Asidecolumn {
+        width: 80%;
+        margin-left: 10%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Asidecolumn img:first-of-type {
+        width: 50%;
+    }
+
+    .cbox iframe {
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Asidecolumn {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .Asidecolumn img:first-of-type {
+        width: 40%;
+    }
+
+    .cbox iframe {
+        height: 100px;
     }
 }
