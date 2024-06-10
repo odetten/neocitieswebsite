@@ -17,10 +17,10 @@ divContainerInfoYahir.classList.add('containerinfoYahir');
 
 // Crear los elementos <p> dentro de divContainerInfoYahir
 const pElement1 = document.createElement('p');
-pElement1.innerHTML = '<span>Title:hello</span>';
+pElement1.innerHTML = '<span>Name:Shutten</span>';
 
 const pElement2 = document.createElement('p');
-pElement2.innerHTML = '<span>Title2:hello2</span>';
+pElement2.innerHTML = '<span>Age: 21 yo</span>';
 
 // Añadir los elementos creados al divContainerInfoYahir
 divContainerInfoYahir.appendChild(pElement1);
