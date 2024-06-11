@@ -544,38 +544,41 @@ marquee{
 }
 
 
-/*Navbar*/
-ul {
-  list-style-type: none;
-  margin-top: 3%;
-  font-family: "tsc", sans-serif;
-  display: flex;
-  justify-content: space-around;
- 
+/* Navbar */
+.nav ul {
+    list-style-type: none;
+    margin-top: 3%;
+    font-family: "tsc", sans-serif;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas si es necesario */
+  }
   
-}
-
-
-
-li a {
+  .nav li {
+    flex: 1 1 auto; /* Los elementos se ajustarán automáticamente */
+    text-align: center;
+    margin: 5px; /* Espaciado entre elementos */
+  }
   
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 40px;
-}
-
-li a:hover:not(.active) {
-  background-color:  rgba(29, 209, 23, 0.397);
+  .nav li a {
+    color: white;
+    text-align: center;
+    padding: 0.5vw; /* Utiliza unidades relativas */
+    text-decoration: none;
+    font-size: clamp(16px, 2vw, 40px); /* Utiliza clamp() para ajustar el tamaño de fuente dinámicamente */
+  }
   
+  .nav li a:hover:not(.active) {
+    background-color: rgba(29, 209, 23, 0.397);
+  }
   
-}
-
-.active {
-  background-color: rgb(15, 95, 51);
-  
-}
+  .nav .active {
+    background-color: rgb(15, 95, 51);
+  }
 
 .profile-info {
     display: flex;
@@ -587,7 +590,7 @@ li a:hover:not(.active) {
 .cbox{
 	margin-bottom: 200%;
 	margin-right: 4px;
-    font-family: "tsc", sans-serif;
+    
 }
 
 
