@@ -1,0 +1,726 @@
+
+:root {
+    
+    --white-text-shadow: 0 0 20px #43944e;
+    
+    
+}
+
+body{
+	/*background-image: linear-gradient(123deg, rgba(138,0,29,1) 0%, rgba(0,0,0,0.9682247899159664) 47%, rgba(157,28,55,1) 94%);*/
+	background-color: rgb(0, 0, 0);
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(neuropol-x-free.rg-regular.otf);
+}
+
+@font-face {
+  font-family: "fuenteXD";
+  src: url('BigDots.ttf'); /* Ruta a tu archivo de fuente */
+}
+
+@font-face{
+    font-family: "tsc";
+    src: url('TT_CHIARO-B.ttf') format('truetype');
+}
+
+.aside-left {
+   
+    width: 10%;
+    border: solid blue;/* Agrega otros estilos según tus preferencias */
+   	margin-left: -12%;
+   	position: absolute;
+   	height: 900px;
+    margin-top: -10px;
+    padding: 0%;
+}
+
+.Asidecolumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the elements */
+    width: 13vw; /* Use viewport width units for responsive width */
+    border: solid blue;
+    margin-left: 47vw; /* Use viewport width units for responsive margin */
+    position: absolute;
+    height: 40vh; /* Use viewport height units for responsive height */
+    margin-top: -0.5vh; /* Use viewport height units for responsive margin */
+}
+
+
+
+.Asidecolumn img:first-of-type {
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 3vw 0.5vw rgba(98, 79, 255, 0.38); /* Use relative units for box-shadow */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.aside-RIGHT h3{
+    display: none;
+}
+
+.aside-RIGHT2 {
+    margin-top: -40vh; /* Use viewport height units for responsive margin */
+    box-shadow: 0 0 1vw 0.1vw rgba(98, 79, 255, 0.38); /* Use relative units for box-shadow */
+    transition: box-shadow 0.3s ease-in-out;
+    border: solid blue;
+}
+
+
+#listening{
+    color: white;
+   
+}
+
+#blob{
+    
+    
+    margin-right: 7px;
+    height: 10px;
+    width: 10px;
+    box-shadow: 0 0 0 0 #5dff8a;
+    transform: scale(1);
+    animation: pulse 2s infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 3px;
+}
+
+
+.topbox{
+	
+	
+	height: 150px;
+    width: 90%;
+	box-shadow: inset -1px -1px #00138c, inset 1px 1px #0831d9, inset -2px -2px #001ea0, inset 2px 2px #166aee, inset -3px -3px #003bda, inset 3px 3px #0855dd;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.topbox{
+	 font-size: 30px;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+    padding: 3px;
+     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("../images/tsc_banner1.jpg");
+}
+
+.silvercasebanner1{
+    position: relative;
+    z-index: 1;
+}
+
+.title-bar {
+    font-family: Trebuchet MS;
+    background: linear-gradient(180deg,#18ff09,#25ee00 8%,#2bb514 40%,#17ff00 88%,#46ed37 93%,#1bff00 95%,#0dd700 96%,#07d700);
+    padding: 3px 5px 3px 3px;
+    border-top: 1px solid #24d908;
+    border-left: 1px solid #0bd908;
+    border-right: 1px solid #0da000;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 7px;
+    font-size: 24px;
+    text-shadow: 1px 1px #13890f;
+    height: 29px;
+    margin-top: -8px;
+    width: 101.2%;
+    margin-left: -10px;
+    
+}
+
+.topbox {
+    box-shadow: inset -1px -1px #178c00, inset 1px 1px #15d908, inset -2px -2px #00a003, inset 2px 2px #16ee31,
+        inset -3px -3px #06da00, inset 3px 3px #08dd0f;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 0 0 3px 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.controles img {
+    height: 20px;
+    transition: filter 0.3s ease; /* Añade la transición para el cambio de filtro */
+    
+
+}
+.controles img:hover {
+    filter: brightness(70%);
+}
+
+
+
+.controles img:nth-child(1) {
+    transition: filter 0.3s ease; /* Añade la transición para el cambio de filtro */
+}
+
+.controles img:nth-child(2) {
+    transition: filter 0.3s ease; /* Añade la transición para el cambio de filtro */
+}
+
+.controles img:nth-child(3) {
+    transition: filter 0.3s ease; /* Añade la transición para el cambio de filtro */
+}
+
+.controles img:hover {
+    filter: brightness(70%);
+}
+
+
+.controles{
+	display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.window-body {
+  color: white;
+  font-family: "fuenteXD", sans-serif;
+  text-shadow: var(--white-text-shadow);
+  font-size: 50px;
+  overflow: hidden;
+  position: relative;
+  
+}
+
+.window-body img.first-image {
+  width: 7%; /* Reduje el ancho para que sea más pequeña */
+  height: 60%;
+  position: absolute;
+  top: 20%; /* Ajusta la posición de la primera imagen desde la parte superior */
+  left: 10px; /* Ajusta la posición de la primera imagen desde la izquierda */
+}
+
+.window-body img:last-child {
+  width: 15%;
+  height: 63%;
+  position: absolute;
+  margin-left: 38%;
+  bottom: 0;
+   margin-bottom: 32px;
+}
+
+
+
+  
+.shuttensdiary{
+	margin-left: -30px;
+margin-top: -30px;
+	height: 100px;
+	width: 110%;
+    background-color: #234f21;
+    color: red;
+    font-size: 80px;
+
+}
+
+.shuttensdiary img:nth-child(1){
+	margin-top: -10px;
+	height: 110%;
+	width: 100%;
+}
+
+
+.title-bar-text{
+margin-right: 740px;
+margin-top: -28px;
+color: white;
+}
+
+.container{
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	flex-flow: row wrap;
+	width: 95%;
+	margin: 0 auto;
+	color: white;	
+	border: solid 1px;
+	
+}
+
+
+
+
+.wrapper{
+	
+	display: flex;
+	flex-flow: row wrap;
+	text-align: center;
+	width: 48%;
+	margin: 0 auto;
+	justify-content: center;
+
+}
+
+.wrapper > *{
+	padding: 10px;
+	margin: 10px;
+	flex: 1 100%;
+}
+/*
+.header{
+	outline-color: lightcoral;
+	height: 100px;
+	outline-style: solid;
+	outline-width: 2px;
+	
+}*/
+
+.nav{
+	width: 95.2%;
+    height: 100px;
+	flex: 0 0 auto;
+	margin-top: -10px;
+	border-left: 2px solid white; /* Ajusta el grosor y el color del borde según tus necesidades */
+    border-right: 2px solid white; /* Ajusta el grosor y el color del borde según tus necesidades */
+    border-bottom: 2px solid white; 
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/tsc_banner2.png");
+    background-position: center 58%;
+
+    
+}
+
+.footer{
+	background: lightseagreen;
+	height: 30px;
+	order:5;
+}
+
+.aside1 {
+    margin-top: -10px;
+    max-width: 100%;
+    margin-right: -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar los elementos horizontalmente */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('https://i.pinimg.com/originals/d6/0f/75/d60f7528bfc95059ea678209f793b75e.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 110%;
+    position: relative;
+    border-left: 2px solid white;
+    border-radius: 3px;
+    height: 103%;
+}
+
+.imagenperfil img{
+    width: 50%; /* Ajustar el tamaño de la imagen según sea necesario */
+    max-width: 200px; /* Limitar el tamaño máximo de la imagen */
+    height: auto; /* Mantener la proporción de la imagen */
+    border: solid 4px midnightblue;
+    border-style: outset;
+    margin-top: 15px;
+    display: block; /* Cambiar display flex a block para img */
+}
+
+.aside1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.imagenperfil {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center; /* Centrar la imagen horizontalmente */
+    width: 100%;
+    margin-bottom: 20px; /* Añadir espacio entre la imagen y el contenido */
+}
+
+.containerinfoYahir {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    overflow: hidden;
+    z-index: 1;
+    font-family: "tsc", sans-serif;
+}
+
+.containerinfoYahir::before, .containerinfoYahir::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent ;
+    box-sizing: border-box;
+    animation: animate 3.5s linear infinite;
+}
+
+.containerinfoYahir::before {
+    border-left-color: black;
+            border-right-color: black;
+            border-top-color: black;
+            border-bottom-color: black;
+            animation-delay: 3s;
+}
+
+.containerinfoYahir::after {
+    border-top-color: rgba(68, 108, 243, 0.678);
+    border-bottom-color: rgba(55, 91, 209, 0.678);
+    border-left-color: rgba(22, 59, 180, 0.678);
+    border-right-color: rgba(16, 38, 110, 0.678);
+}
+
+@keyframes animate {
+    0% {
+        clip: rect(0px, 4px, 150px, 0px); /* Inicio: ninguna parte visible */
+    }
+    25% {
+        clip: rect(0px, 200px, 5px, 0px); /* Línea horizontal arriba */
+    }
+    50% {
+        clip: rect(0px, 200px, 200px, 196px); /* Línea vertical derecha */
+    }
+    75% {
+        clip: rect(196px, 200px, 200px, 0px); /* Línea horizontal abajo */
+    }
+    100% {
+        clip: rect(0px, 4px, 200px, 0px); /* Línea vertical izquierda */
+    }
+}
+
+
+
+
+.other{
+	outline-style: solid;
+	outline-width: 2px;
+	outline-color: pink;
+	order: 4;
+}
+
+.main{
+	width: 68%;
+	height: 600px;
+	padding: 20px;
+	text-align: center;
+    flex: 3;
+    font-family: "tsc", sans-serif;
+    
+}
+
+.info-container {
+    
+ /* Color de fondo rojo con transparencia */
+    padding: 10px; /* Espacio entre el contenido y el borde */
+    margin-top: 50%; /* Espacio entre este contenedor y el contenido principal */
+    width: 40%;
+    height: 20%;
+    display: flex; /* Establecer el contenedor como un flex container */
+    align-items: flex-start; /* Alinear elementos al principio del contenedor */
+    justify-content: flex-start; /* Alinear el contenido hacia la izquierda */	
+    border: 3px solid white;
+    border-radius: 4px;
+    background-image: url('../images/tsc1.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+.texto-perfil{
+	background-color: rgba(100, 127, 143, 0.2); /* Color de fondo rojo con transparencia */
+    padding: 1px; /* Espacio entre el contenido y el borde */
+    width: 40%;
+    height: 50%;
+    border-radius: 5px;
+    margin: 5px auto; /* Centrar verticalmente y agregar espacio entre ellos */
+    display: flex; /* Establecer el contenedor como un flex container */
+    align-items: center; /* Centrar verticalmente los elementos */
+    justify-content: flex-start; /* Centrar horizontalmente los elementos */
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-family: myFirstFont;
+}
+
+
+.info-content {
+    display: flex; /* Establecer el contenedor como un flex container */
+    flex-direction: column; /* Alinear los elementos verticalmente */
+    
+    
+}
+
+.vertical-text {
+    writing-mode: vertical-lr; /* 'rl' significa de derecha a izquierda */
+    font-size: 40px;
+    font-family: myFirstFont;
+    background-color: rgba(255, 0, 0, 0.2);
+    width: fit-content;
+    white-space: nowrap;
+    float: left;
+    
+
+
+}
+
+.vertical-text .info-content{
+	 height: inherit; /* Heredar la altura del info-container */
+}
+
+.container-texto-perfil{
+	
+	position: relative;
+	left: -10%;
+	margin-top: 5%;
+
+}	
+
+
+
+
+
+
+
+.aside1 > img:first-of-type {
+   
+     min-width: 150px; /* Por ejemplo, aquí puedes definir el ancho mínimo deseado */
+
+
+}
+
+.imagenperfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+marquee{
+	
+	position: absolute; /* Establece la posición absoluta para que ignore el div imagenperfil */
+    width: 100%; /* Hace que el marquee ocupe todo el ancho del aside1 */
+
+    padding: 0; /* Elimina cualquier relleno interno */
+    margin: 0; /* Elimina cualquier margen */
+    z-index: 3; /* Asegura que el marquee esté por encima de otros elementos */
+    bottom: 0px;
+    
+   
+}
+
+.Asidecolumn img:first-of-type {
+    
+    border-radius: 10px;
+    box-shadow: 0 0 60px 7px rgb(98 79 255 / 38%);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    display: flex;
+    justify-content: center; /* Centra el contenido dentro del contenedor */
+}
+
+.marquee-container marquee {
+    width: 100%; /* Hace que el marquee ocupe todo el ancho del contenedor */
+}
+
+.marquee-container img {
+   
+    display: inline-block;
+}
+
+
+
+
+.other{
+	height: 500px;
+
+}
+
+.other >img:first-of-type{
+	height: 50%;
+	width: 30%;
+	margin-left: -70%;
+
+}
+
+
+/* Navbar */
+.nav ul {
+    list-style-type: none;
+    margin-top: 3%;
+    font-family: "tsc", sans-serif;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas si es necesario */
+  }
+  
+  .nav li {
+    flex: 1 1 auto; /* Los elementos se ajustarán automáticamente */
+    text-align: center;
+    margin: 5px; /* Espaciado entre elementos */
+  }
+  
+  .nav li a {
+    color: white;
+    text-align: center;
+    padding: 0.5vw; /* Utiliza unidades relativas */
+    text-decoration: none;
+    font-size: clamp(16px, 2vw, 40px); /* Utiliza clamp() para ajustar el tamaño de fuente dinámicamente */
+  }
+  
+  .nav li a:hover:not(.active) {
+    background-color: rgba(29, 209, 23, 0.397);
+  }
+  
+  .nav .active {
+    background-color: rgb(15, 95, 51);
+  }
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.cbox {
+    margin-bottom: 200%;
+    margin-right: 4px;
+    width: 100%;
+    max-width: 100%;
+    transition: width 0.3s ease; /* Transición en la propiedad width durante 0.3 segundos */
+
+}
+
+.mobile-warning h3{
+    color: white;
+    font-family: "tsc";
+    display: none;
+}
+
+.shuttensdiarymobile{
+    display: none;
+    margin-top: -10px;
+	height: 110%;
+	width: 100%;
+}
+
+
+/*Responsive */
+
+@media all and (min-width: 600px){
+
+	
+
+
+	.main{
+		flex: 2;
+
+	}
+	.aside1{
+		order:2;
+        flex: 1;
+
+	}
+
+	.main{
+		order:1;
+	}
+	.footer{
+		order: 4;
+	}
+
+}
+
+@media (max-width: 375px){
+
+    .mobile-warning h3{
+        display: block;
+        font-size: 10px;
+    }
+
+    .cbox{
+        display: none;
+        
+    }
+
+    .wrapper{
+        width: 70%
+    }
+
+    .aside-left{
+        margin-left: -10vh;
+    }
+
+    .Asidecolumn{
+        margin-left: 35vh;
+    }
+
+    .window-body{
+        font-size: 28px;
+    }
+
+    .title-bar{
+
+        width: 104%;
+    }
+
+    .window-body img.first-image
+     {
+        width: 10%; /* Aumenta el tamaño relativo de las imágenes en pantallas pequeñas */
+        height: auto;
+        margin-left: -5%;
+        
+    }
+
+    .window-body img.second-image{
+        width: 23%;
+        height: auto;
+        margin-left: 31%;
+    }
+
+    .title-bar-text{
+        margin-top: -20px;
+        font-size: 18px;
+        margin-right: 100px;
+        font-family: "tsc";
+    }
+
+    .Asidecolumn img{
+        display: none;
+    }
+
+    .aside-RIGHT h3{
+        display: block;
+        font-size: 10px;
+    }
+
+    .main{
+        font-size: 13px;
+        
+    }
+
+    .shuttensdiary img{
+        display: none;
+    }
+
+    .shuttensdiarymobile{
+        display: block;
+    }
+
+}
+
+
+
+
+
