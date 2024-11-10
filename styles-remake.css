@@ -1,0 +1,694 @@
+/* styles.css */
+@font-face{
+    font-family: "tsc";
+    src: url('styles/TT_CHIARO-B.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "bigdots";
+  src: url('styles/BigDots.ttf') format('truetype'); 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    background-color: black;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 15px;
+    padding: 10px;
+    flex-grow: 1;
+    width: 75%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.left, .right {
+     display: flex;
+    flex-direction: column;
+    flex-grow: 0; /* No crecerán */
+   
+
+}
+
+.cbox{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    
+    
+}
+
+/* LEFT COLUMNS START HERE */
+
+.column.left .content:nth-child(1){
+    background-color: unset;
+    border: solid 1px blue;
+    height: 65%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)),url('https://i.pinimg.com/originals/d6/0f/75/d60f7528bfc95059ea678209f793b75e.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.column.left .content:nth-child(2){
+    background-color: unset;
+    border: solid 1px blue;
+    font-family: "tsc", sans-serif;
+    height: 20%;
+}
+
+.column.left .content:nth-child(3){
+    background-color: unset;
+    border: solid 1px blue;
+    font-family: "tsc", sans-serif;
+    color: white;
+    height: 15%;
+}
+
+.column.left .content:nth-child(3) h3{
+    text-align: center;
+}
+
+/* BOX WITH ANIMATION STARTS HERE */
+.containerinfoYahir {
+ position: relative;
+  width: 150px;
+  height: 150px;
+  background-color: black;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 10%;
+  font-family: "tsc", sans-serif;
+  padding: 15px;
+}
+
+
+
+.containerinfoYahir::before, .containerinfoYahir::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent ;
+    box-sizing: border-box;
+    animation: animate 3.5s linear infinite;
+}
+
+.containerinfoYahir::before {
+    border-left-color: black;
+            border-right-color: black;
+            border-top-color: black;
+            border-bottom-color: black;
+            animation-delay: 3s;
+}
+
+.containerinfoYahir::after {
+    border-top-color: rgba(68, 108, 243, 0.678);
+    border-bottom-color: rgba(55, 91, 209, 0.678);
+    border-left-color: rgba(22, 59, 180, 0.678);
+    border-right-color: rgba(16, 38, 110, 0.678);
+}
+
+@keyframes animate {
+    0% {
+        clip: rect(0px, 4px, 100px, 0px); /* Inicio: ninguna parte visible */
+    }
+    25% {
+        clip: rect(0px, 180px, 5px, 0px); /* Línea horizontal arriba */
+    }
+    50% {
+        clip: rect(0px, 180px, 180px, 176px); /* Línea vertical derecha */
+    }
+    75% {
+        clip: rect(176px, 180px, 180px, 0px); /* Línea horizontal abajo */
+    }
+    100% {
+        clip: rect(0px, 4px, 180px, 0px); /* Línea vertical izquierda */
+    }
+}
+
+.pfp{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.pfp img{
+
+    width: 60%;
+    border: solid 4px midnightblue;
+    border-style: outset;
+
+}
+
+textarea {
+  max-width: 150px; /* Ajusta el valor según tus necesidades */
+  max-height: 160px; /* Ajusta el valor según tus necesidades */
+  min-width: 50%;
+   box-sizing: border-box;
+     padding: 10px; /* Agrega un relleno interno */
+
+}
+
+
+/* //////////LEFT COLUMNS ENDS HERE///////// */
+
+
+
+/* -----RIGHT COLUMNS START HERE---- */
+
+.column.right .content:nth-child(2){
+    background-color: unset;
+    border: solid 1px blue;
+    height: 30%;
+    max-height: 90%;
+}
+
+.column.right .content:nth-child(1){
+    background-color: unset;
+    border: solid 1px blue;
+    display: flex;
+    
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+} 
+
+.Guestbook{
+    font-family: "tsc";
+}
+
+.Guestbook a{
+    color: #00a003;
+    text-decoration: none;
+}
+
+
+.site-updates{
+    overflow-y: auto;
+    height: 60%;
+    max-height: 300px; /* Altura máxima para el área de desplazamiento */
+    padding-right: 10px; /* Espacio para la barra de desplazamiento */
+    font-family: "tsc";
+
+}
+
+.site-updates p{
+    color: white;
+
+}
+
+/* Estilo para la barra de desplazamiento en WebKit (Chrome, Safari, Opera) */
+.site-updates::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+}
+
+.site-updates::-webkit-scrollbar-thumb {
+    background-color: #232323; /* Color del pulgar de la barra de desplazamiento */
+    border-radius: 5px; /* Borde redondeado del pulgar */
+}
+
+.site-updates::-webkit-scrollbar-track {
+    background-color: #248039; /* Color del fondo de la barra de desplazamiento */
+}
+
+.Guestbook{
+    color: white;
+    
+    
+}
+
+
+
+.column.right .content:nth-child(3){
+    background-color: unset;
+    border: solid 1px blue;
+    max-height: 70%;
+
+}
+
+#listening{
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    align-items: flex-start; /* Alinea los elementos al inicio (izquierda) */
+    width: 100%;
+    overflow: hidden; /* Evita el desbordamiento */
+    box-sizing: border-box; /* Incluye el padding y el borde dentro del tamaño total */
+    padding: 10px; /* Añade un padding para asegurar que el contenido no toque los bordes */
+}
+
+#listeningstatus{
+    width: max-content;
+}
+
+#listening img{
+    height: 96px;
+    width: 96px;
+}
+
+#trackInfo{
+  margin-left: 5%;
+  margin-top: -12%;
+    
+}
+
+#trackName{
+   color: #46ed37;
+    
+}
+
+#artistName{
+    color: #1bae1d;
+}
+
+#musicBox{
+    display: flex;
+}
+
+#trackStatus {
+   width: 100%;
+}
+
+#blob{
+    
+    
+    margin-right: 7px;
+    height: 10px;
+    width: 10px;
+    box-shadow: 0 0 0 0 #5dff8a;
+    transform: scale(1);
+    animation: pulse 2s infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 3px;
+}
+
+
+/* BOX WITH ANIMATION ENDS HERE */
+
+/*//////// RIGHT COLUMNS ENDS HERE//////// */
+
+.marquee1-container {
+    width: 100%; /* Asegura que el contenedor no sea más ancho que su contenedor padre */
+    overflow: hidden; /* Oculta el desbordamiento */
+    margin-block-start: auto;
+}
+
+
+.center {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Permitirá que la columna central crezca */
+}
+
+
+/*this is the first column from the CENTER part*/
+.column.center .content:nth-child(1) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("images/tsc_banner1.jpg");
+    height: 20%;
+    position: relative;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: white;
+    font-family: "bigdots", sans-serif;
+    font-size: 3vw;
+    text-align: center;
+    border: unset;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.column.center .content:nth-child(1) p {
+    margin-top: 2%;
+    
+}
+
+.title-bar {
+    font-family: "tsc", sans-serif;
+    background: linear-gradient(180deg,#18ff09,#25ee00 8%,#2bb514 40%,#17ff00 88%,#46ed37 93%,#1bff00 95%,#0dd700 96%,#07d700);
+    padding: 2px 4px;
+    border: 1px solid #0bd908;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 7px;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px #13890f;
+    height: 2rem;
+    margin: -8px -10px 0 -10px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-bar h3{
+    font-size: 3vh;
+    color: white;
+}
+
+.controls{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+    transition: filter 0.3s ease; /* Añade la transición para el cambio de filtro */
+     max-width: 50%; /* Asegura que la imagen no sea más ancha que su contenedor */
+  display: block; /* Elimina el espacio adicional que puede aparecer debajo de la imagen */
+  
+
+}
+
+
+.controls img {
+    height: 20px;
+    transition: filter 0.3s ease; /* Añade la transición para el cambio de filtro */
+
+    
+
+}
+.controls img:hover {
+    filter: brightness(20%);
+}
+
+
+
+.controls img:nth-child(1) {
+    transition: filter 0.3s ease; /* Añade la transición para el cambio de filtro */
+}
+
+.controls img:nth-child(2) {
+    transition: filter 0.3s ease; /* Añade la transición para el cambio de filtro */
+}
+
+.controls img:nth-child(3) {
+    transition: filter 0.3s ease; /* Añade la transición para el cambio de filtro */
+}
+
+.controls img:hover {
+    filter: brightness(20%);
+}
+
+
+
+
+.topbox {
+    box-shadow: inset -1px -1px #178c00, inset 1px 1px #15d908, inset -2px -2px #00a003, inset 2px 2px #16ee31,
+                inset -3px -3px #06da00, inset 3px 3px #08dd0f;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 10px; /* Ajusta el padding para el contenido interno */
+    -webkit-font-smoothing: antialiased;
+    position: absolute; /* Posiciona absolutamente dentro del content */
+    top: 0; /* Coloca en la parte superior */
+    left: 0; /* Coloca en el borde izquierdo */
+    right: 0; /* Coloca en el borde derecho */
+    bottom: 0; /* Coloca en el borde inferior */
+   
+}
+
+/*this is the second column of the CENTER part*/
+.column.center .content:nth-child(2) {
+    background-color: unset;
+    height: 80%; /* Ajusta la altura */
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: white;
+}
+
+.column.center .content:nth-child(2) p {
+    display: flex;
+    margin-block-start: -5%;
+    font-family: "tsc";
+    
+    
+}
+
+.shuttensdiary{
+    text-align: center;
+    background-color: #234f21;
+    flex-grow: 1;
+    height: 10vh;
+    width: 100%;
+}
+
+.tsc-gif {
+ position: relative;
+  width: 236px;
+  height: 132px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("images/tsc1.gif");
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: "tsc", sans-serif;
+}
+
+
+
+.tsc-gif::before, .tsc-gif::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent ;
+    box-sizing: border-box;
+    animation: animate-tsc-gif 3.5s linear infinite;
+}
+
+.tsc-gif::before {
+    border-left-color: black;
+            border-right-color: black;
+            border-top-color: black;
+            border-bottom-color: black;
+            animation-delay: 3s;
+}
+
+.tsc-gif::after {
+    border-top-color: rgba(97, 243, 68, 0.678);
+    border-bottom-color: rgba(99, 209, 55, 0.678);
+    border-left-color: rgba(22, 180, 30, 0.678);
+    border-right-color: rgba(21, 110, 16, 0.678);
+}
+
+@keyframes animate-tsc-gif {
+    0% {
+        clip: rect(0px, 4px, 100px, 0px); /* Inicio: ninguna parte visible */
+    }
+    25% {
+        clip: rect(0px, 236px, 5px, 0px); /* Línea horizontal arriba */
+    }
+    50% {
+        clip: rect(0px, 236px, 236px, 232px); /* Línea vertical derecha */
+    }
+
+    /* just thought it looked cool if i removed this part of the animation so yeah lmao that why i comment this part */
+    /*75% {
+        clip: rect(232px, 236px, 236px, 0px); /* Línea horizontal abajo 
+    }*/
+
+    100% {
+        clip: rect(0px, 4px, 236px, 0px); /* Línea vertical izquierda */
+    }
+}
+
+.tsc-gif2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("images/sunflower.gif");
+    width: 236px;
+    height: 132px;
+  background-size: cover;
+  background-position: center;
+  margin-left: 5%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  
+
+ 
+}
+
+.tsc-gif2::before, .tsc-gif2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent ;
+    box-sizing: border-box;
+    animation: animate-tsc-gif2 6s linear infinite;
+}
+
+.tsc-gif2::before {
+    border-left-color: rgb(56, 13, 13);
+            border-right-color: rgb(45, 2, 7);
+            border-top-color: rgb(71, 3, 3);
+            border-bottom-color: rgb(51, 1, 1);
+            animation-delay: 1s;
+}
+
+.tsc-gif2::after {
+    border-top-color: rgba(243, 68, 68, 0.678);
+    border-bottom-color: rgba(209, 55, 55, 0.678);
+    border-left-color: rgba(180, 22, 22, 0.678);
+    border-right-color: rgba(110, 16, 16, 0.678);
+}
+
+@keyframes animate-tsc-gif2 {
+    0% {
+        clip: rect(0px, 4px, 200px, 0px); /* Inicio: ninguna parte visible */
+    }
+    25% {
+        clip: rect(0px, 50px, 20px, 0px); /* Línea horizontal arriba */
+    }
+    50% {
+        clip: rect(0px, 236px, 150px, 150px); /* Línea vertical derecha */
+    }
+
+    /* just thought it looked cool if i removed this part of the animation so yeah lmao that why i comment this part */
+    /*75% {
+        clip: rect(232px, 236px, 236px, 0px); /* Línea horizontal abajo 
+    }*/
+
+    100% {
+        clip: rect(0px, 4px, 236px, 0px); /* Línea vertical izquierda */
+    }
+}
+
+.column.center .content:nth-child(3) {
+    
+    height: 10%; /* Ajusta la altura */
+}
+
+/*navbar*/
+
+.navbar ul{
+    font-family: "tsc", sans-serif;
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+.navbar li {
+    flex: 1 1 auto; /* Los elementos se ajustarán automáticamente */
+    text-align: center;
+    margin: 5px; /* Espaciado entre elementos */
+  }
+  
+  .navbar li a {
+    color: white;
+    text-align: center;
+    padding: 0.5vw; /* Utiliza unidades relativas */
+    text-decoration: none;
+    font-size: clamp(16px, 2vw, 40px); /* Utiliza clamp() para ajustar el tamaño de fuente dinámicamente */
+  }
+  
+  .navbar li a:hover:not(.active) {
+    background-color: rgba(29, 209, 23, 0.397);
+  }
+  
+  .navbar .active {
+    background-color: rgb(15, 95, 51);
+  }
+
+.column.center .content:nth-child(3){
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/tsc_navbar.png");
+   
+    
+     background-position: left 35% top 50%;
+
+  }
+
+
+
+.column.left .content, .column.right .content {
+    height: 50%; /* Ajusta la altura de las columnas laterales */
+}
+
+.content {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+    
+
+    .title-bar {
+        font-size: 20px;
+        height: 10%;
+
+    }
+
+   .column.center .content:nth-child(1) p{
+        font-size: 40px;
+    }
+    
+    .title-bar h3{
+    font-size: 1vh;
+    color: white;
+}
+
+.controls{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+    height: 13%;
+    width: 13%;
+    margin-right: 5px;
+    transition: filter 0.3s ease; /* Añade la transición para el cambio de filtro */
+
+}
+
+
+
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+.column.center .content:nth-child(1) p{
+   font-size: 35px;
+}
+
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 5px;
+    }
+.column.center .content:nth-child(1) p{
+   font-size: 27px;
+}
+
+
+}
