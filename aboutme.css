@@ -1,0 +1,435 @@
+/* styles.css */
+@font-face{
+    font-family: "tsc";
+    src: url('styles/TT_CHIARO-B.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "bigdots";
+  src: url('styles/BigDots.ttf') format('truetype'); 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    background-color: black;
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento vertical */
+    height: 12px; /* Altura de la barra de desplazamiento horizontal */
+}
+
+/* Fondo de la scrollbar */
+::-webkit-scrollbar-track {
+    background: #055b0b; 
+}
+
+/* Handle de la scrollbar (la parte que se arrastra) */
+::-webkit-scrollbar-thumb {
+    background: #2b2a3f; 
+    border-radius: 10px; /* Borde redondeado */
+}
+
+/* Handle de la scrollbar en hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #2f435e; 
+}
+
+/* Scrollbar en elementos de textarea */
+textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Scrollbar track en textarea */
+textarea::-webkit-scrollbar-track {
+    background: #e1e1e1;
+}
+
+/* Scrollbar thumb en textarea */
+textarea::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 4px;
+}
+
+/* Scrollbar thumb en hover en textarea */
+textarea::-webkit-scrollbar-thumb:hover {
+    background: #444;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 15px;
+    padding: 10px;
+    flex-grow: 1;
+    width: 75%;
+    
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+
+
+/* BOX WITH ANIMATION ENDS HERE */
+
+/*//////// RIGHT COLUMNS ENDS HERE//////// */
+
+
+
+
+.center {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Permitirá que la columna central crezca */
+}
+
+
+/*this is the first column from the CENTER part*/
+.column.center .content:nth-child(1) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("images/tsc_banner1.jpg");
+    height: 18vh;
+    position: relative;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: white;
+    font-family: "bigdots", sans-serif;
+    font-size: 3vw;
+    text-align: center;
+    border: unset;
+}
+
+.column.center .content:nth-child(1) p {
+    margin-top: 2%;
+    
+}
+
+.title-bar {
+    font-family: "tsc", sans-serif;
+    background: linear-gradient(180deg,#18ff09,#25ee00 8%,#2bb514 40%,#17ff00 88%,#46ed37 93%,#1bff00 95%,#0dd700 96%,#07d700);
+    padding: 2px 4px;
+    border: 1px solid #0bd908;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 7px;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px #13890f;
+    height: 2rem;
+    margin: -8px -10px 0 -10px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-bar a{
+    text-decoration: none;
+    color: rgb(86, 11, 86)
+}
+
+.title-bar h3{
+    font-size: 3vh;
+    color: white;
+}
+
+.controls{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+    transition: filter 0.3s ease; /* Añade la transición para el cambio de filtro */
+     max-width: 50%; /* Asegura que la imagen no sea más ancha que su contenedor */
+  display: block; /* Elimina el espacio adicional que puede aparecer debajo de la imagen */
+  
+
+}
+
+
+.controls img {
+    height: 20px;
+    transition: filter 0.3s ease; /* Añade la transición para el cambio de filtro */
+
+    
+
+}
+.controls img:hover {
+    filter: brightness(20%);
+}
+
+
+
+.controls img:nth-child(1) {
+    transition: filter 0.3s ease; /* Añade la transición para el cambio de filtro */
+}
+
+.controls img:nth-child(2) {
+    transition: filter 0.3s ease; /* Añade la transición para el cambio de filtro */
+}
+
+.controls img:nth-child(3) {
+    transition: filter 0.3s ease; /* Añade la transición para el cambio de filtro */
+}
+
+.controls img:hover {
+    filter: brightness(20%);
+}
+
+
+
+
+.topbox {
+    box-shadow: inset -1px -1px #178c00, inset 1px 1px #15d908, inset -2px -2px #00a003, inset 2px 2px #16ee31,
+                inset -3px -3px #06da00, inset 3px 3px #08dd0f;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 10px; 
+    -webkit-font-smoothing: antialiased;
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+  
+}
+
+/*this is the second column of the CENTER part*/
+.column.center .content:nth-child(2) {
+    background-color: unset;
+   border: unset;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.column-split {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    margin-top: 10px; /* Ajusta el espacio entre la imagen y los textos */
+}
+
+.column-split .left,
+.column-split .right {
+    padding: 10px;
+    
+}
+
+.column-split .left {
+    background-color: #000000;
+    flex: 1;
+    border-right: solid 1px white;
+}
+
+.column-split .right {
+    background-color: #0d0c16;
+    flex: 2;
+    display: flex;
+    flex-direction: column; /* Añadido para disposición vertical */
+}
+
+.top, .bottom {
+    flex: 1; /* Hacen que las dos filas ocupen el mismo espacio vertical */
+    justify-content: center;
+    align-items: center;
+    background-color: unset;
+    border-bottom: solid 1px ;
+}
+
+.top{
+    background-color: unset;
+}
+
+
+
+.column.center .content:nth-child(2) p {
+    font-family: "tsc";
+    font-size: 1vw;
+}
+
+
+
+
+.column.center .content:nth-child(3) {
+    height: 10%; /* Ajusta la altura */
+}
+/*navbar*/
+
+.navbar ul{
+    font-family: "tsc", sans-serif;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+
+}
+
+.navbar li {
+    flex: 1 1 auto; /* Los elementos se ajustarán automáticamente */
+    text-align: center;
+    margin: 5px; /* Espaciado entre elementos */
+  }
+  
+  .navbar li a {
+    color: white;
+    text-align: center;
+    padding: 0.5vw; /* Utiliza unidades relativas */
+    text-decoration: none;
+    font-size: clamp(16px, 2vw, 40px); /* Utiliza clamp() para ajustar el tamaño de fuente dinámicamente */
+  }
+  
+  .navbar li a:hover:not(.active) {
+    background-color: rgba(29, 209, 23, 0.397);
+  }
+  
+  .navbar .active {
+    background-color: rgb(15, 95, 51);
+  }
+
+.column.center .content:nth-child(3){
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/tsc_navbar.png");
+   
+    
+     background-position: left 35% top 50%;
+
+  }
+
+
+
+
+.content {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.column.center .content:nth-child(2){
+    position: relative;
+   
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("images/tsc_button_test.gif");
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: "tsc", sans-serif;
+}
+
+
+   
+   
+   
+.column.center .content:nth-child(2)::before, .column.center .content:nth-child(2)::after {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       border: 2px solid transparent ;
+       box-sizing: border-box;
+       animation: animate-tsc-gif 3.5s linear infinite;
+   }
+   
+   .column.center .content:nth-child(2)::before {
+       border-left-color: black;
+               border-right-color: black;
+               border-top-color: black;
+               border-bottom-color: black;
+               animation-delay: 3s;
+   }
+   
+   .column.center .content:nth-child(2)::after {
+       border-top-color: rgba(97, 243, 68, 0.678);
+       border-bottom-color: rgba(99, 209, 55, 0.678);
+       border-left-color: rgba(22, 180, 30, 0.678);
+       border-right-color: rgba(21, 110, 16, 0.678);
+   }
+
+   @keyframes animate-tsc-gif {
+    0% {
+        clip: rect(0px, 4px, 652px, 0px); /* Inicio: ninguna parte visible */
+    }
+    25% {
+        clip: rect(0px, 737px, 5px, 0px); /* Línea horizontal arriba */
+    }
+    50% {
+        clip: rect(0px, 737px, 652px, 733px); /* Línea vertical derecha */
+    }
+
+    /* just thought it looked cool if i removed this part of the animation so yeah lmao that why i comment this part */
+    /*75% {
+        clip: rect(232px, 236px, 236px, 0px); /* Línea horizontal abajo 
+    }*/
+
+    100% {
+        clip: rect(0px, 4px, 236px, 0px); /* Línea vertical izquierda */
+    }
+}
+   
+
+
+
+@media (max-width: 768px) {
+    
+
+    .title-bar {
+        font-size: 20px;
+        height: 10%;
+
+    }
+
+   .column.center .content:nth-child(1) p{
+        font-size: 40px;
+    }
+    
+    .title-bar h3{
+    font-size: 1vh;
+    color: white;
+}
+
+.controls{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+    height: 13%;
+    width: 13%;
+    margin-right: 5px;
+    transition: filter 0.3s ease; /* Añade la transición para el cambio de filtro */
+
+}
+
+
+
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+.column.center .content:nth-child(1) p{
+   font-size: 35px;
+}
+
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 5px;
+    }
+.column.center .content:nth-child(1) p{
+   font-size: 27px;
+}
+
+
+}
